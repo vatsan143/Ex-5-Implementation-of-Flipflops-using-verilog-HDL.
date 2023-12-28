@@ -104,8 +104,11 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ### Procedure
 /* write all the steps invloved */ 
 1.Using nand gates and wires construct sr flip flop.
+
 2.Repeat the same steps to construct JK,D,T flipflops.
+
 3.Find RTL logic and timing diagram for all flipflops.
+
 4.end the program
 
 
@@ -140,13 +143,21 @@ endmodule
 
 
 module JK_flipflop(J,K,clk,Q,Qbar);
+
 input J,K,clk;
+
 output Q,Qbar;
+
 wire X,Y;
+
 nand (X,J,clk,Qbar);
+
 nand (Y,K,clk,Q);
+
 nand (Q,X,Qbar);
+
 nand (Qbar,Y,Q);
+
 endmodule
 
 
@@ -154,14 +165,23 @@ endmodule
 
 
 module D_flipflop(D,clk,Q,Qbar);
+
 input D,clk;
+
 output Q,Qbar;
+
 assign Dbar=~D;
+
 wire X,Y;
+
 nand (X,D,clk);
+
 nand (Y,Dbar,clk);
+
 nand (Q,X,Qbar);
+
 nand (Qbar,Y,Q);
+
 endmodule
 
 
@@ -169,13 +189,21 @@ endmodule
 
 
 module T_flipflopo(T,clk,Q,Qbar);
+
 input T,clk;
+
 output Q,Qbar;
+
 wire S,R;
+
 nand (S,T,clk,Qbar);
+
 nand (R,T,clk,Q);
+
 nand (Q,S,Qbar);
+
 nand (Qbar,R,Q);
+
 endmodule
 
 

@@ -116,8 +116,8 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: Baudhigan D
-RegisterNumber:  23012654
+Developed by: Srivatsan G
+RegisterNumber:  23013933
 
 ## SR FLIP FLOP:
 

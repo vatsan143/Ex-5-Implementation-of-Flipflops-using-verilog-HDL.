@@ -102,15 +102,63 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
 ### Procedure
-/* write all the steps invloved */
+/* write all the steps invloved */ 
+1.Using nand gates and wires construct sr flip flop. 2.Repeat the same steps to construct JK,D,T flipflops. 3.Find RTL logic and timing diagram for all flipflops. 4.end the program
 
 
 
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: v.sanjay
+RegisterNumber:  23012749
+
+## SR FLIP FLOP:
+module SR_flipflop(S,R,clk,Q,Qbar);
+input S,R,clk;
+output Q,Qbar;
+wire X,Y;
+nand (X,S,clk);
+nand (Y,R,clk);
+nand (Q,X,Qbar);
+nand (Qbar,Y,Q);
+endmodule
+
+## JK FLIP FLOP:
+module JK_flipflop(J,K,clk,Q,Qbar);
+input J,K,clk;
+output Q,Qbar;
+wire X,Y;
+nand (X,J,clk,Qbar);
+nand (Y,K,clk,Q);
+nand (Q,X,Qbar);
+nand (Qbar,Y,Q);
+endmodule
+
+
+## D FLIP FLOP:
+module D_flipflop(D,clk,Q,Qbar);
+input D,clk;
+output Q,Qbar;
+assign Dbar=~D;
+wire X,Y;
+nand (X,D,clk);
+nand (Y,Dbar,clk);
+nand (Q,X,Qbar);
+nand (Qbar,Y,Q);
+endmodule
+
+
+## T FLIP FLOP:
+module T_flipflopo(T,clk,Q,Qbar);
+input T,clk;
+output Q,Qbar;
+wire S,R;
+nand (S,T,clk,Qbar);
+nand (R,T,clk,Q);
+nand (Q,S,Qbar);
+nand (Qbar,R,Q);
+endmodule
 */
 
 
@@ -119,6 +167,21 @@ RegisterNumber:
 
 
 ### RTL LOGIC FOR FLIPFLOPS 
+
+## SR FLIP FLOP:
+![image](https://github.com/sanjayy2431/Experiment--05-Implementation-of-flipflops-using-verilog/assets/149365143/91579bdb-1bd5-4018-9ff2-993e63716134)
+
+## JK FLIP FLOP:
+![image](https://github.com/sanjayy2431/Experiment--05-Implementation-of-flipflops-using-verilog/assets/149365143/90ffe128-4f7c-4e94-92aa-14bf7638ea02)
+
+## T FLIP FLOP:
+![image](https://github.com/sanjayy2431/Experiment--05-Implementation-of-flipflops-using-verilog/assets/149365143/509ff0ee-16ec-4c7b-9e35-d610b9ace178)
+
+## D FLIP FLOP:
+![image](https://github.com/sanjayy2431/Experiment--05-Implementation-of-flipflops-using-verilog/assets/149365143/5723b55f-7fe3-4957-ba35-324815f0af02)
+
+
+
 
 
 
@@ -129,6 +192,17 @@ RegisterNumber:
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
+## SR FLIP FLOP:
+![image](https://github.com/sanjayy2431/Experiment--05-Implementation-of-flipflops-using-verilog/assets/149365143/a8f97b5f-a687-44fd-ad45-8d8bfddaef55
+
+## JK FLIP FLOP:
+![image](https://github.com/sanjayy2431/Experiment--05-Implementation-of-flipflops-using-verilog/assets/149365143/1a1f5c89-78c9-4e46-a6fe-414a5ad44d8d)
+
+## T FLIP FLOP:
+![image](https://github.com/sanjayy2431/Experiment--05-Implementation-of-flipflops-using-verilog/assets/149365143/ce0f3db0-7071-40ea-9e12-f228ec27f7ed)
+
+## D FLIP FLOP:
+![image](https://github.com/sanjayy2431/Experiment--05-Implementation-of-flipflops-using-verilog/assets/149365143/4f5ebaef-f2a1-4539-912a-a3b1c9579659)
 
 
 
@@ -138,3 +212,4 @@ RegisterNumber:
 
 
 ### RESULTS 
+It is verified succesfully

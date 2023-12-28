@@ -119,13 +119,21 @@ RegisterNumber:  23012749
 ## SR FLIP FLOP:
 
 module SR_flipflop(S,R,clk,Q,Qbar);
+
 input S,R,clk;
+
 output Q,Qbar;
+
 wire X,Y;
+
 nand (X,S,clk);
+
 nand (Y,R,clk);
+
 nand (Q,X,Qbar);
+
 nand (Qbar,Y,Q);
+
 endmodule
 
 ## JK FLIP FLOP:

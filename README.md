@@ -1,4 +1,4 @@
-# Experiment--05-Implementation-of-flipflops-using-verilog
+# Ex - 5 Implementation of Flipflops using verilog HDL.
 ### AIM: To implement all the flipflops using verilog and validating their functionality using their functional tables
 ### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
 ### SOFTWARE REQUIRED:   Quartus prime
@@ -116,8 +116,8 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: v.sanjay
-RegisterNumber:  23012749
+Developed by: Baudhigan D
+RegisterNumber:  23012654
 
 ## SR FLIP FLOP:
 

@@ -117,7 +117,7 @@ Developed by: v.sanjay
 RegisterNumber:  23012749
 
 ## SR FLIP FLOP:
-*/
+
 module SR_flipflop(S,R,clk,Q,Qbar);
 input S,R,clk;
 output Q,Qbar;
@@ -129,6 +129,8 @@ nand (Qbar,Y,Q);
 endmodule
 
 ## JK FLIP FLOP:
+
+
 module JK_flipflop(J,K,clk,Q,Qbar);
 input J,K,clk;
 output Q,Qbar;
@@ -141,6 +143,8 @@ endmodule
 
 
 ## D FLIP FLOP:
+
+
 module D_flipflop(D,clk,Q,Qbar);
 input D,clk;
 output Q,Qbar;
@@ -154,6 +158,7 @@ endmodule
 
 
 ## T FLIP FLOP:
+
 
 module T_flipflopo(T,clk,Q,Qbar);
 input T,clk;
